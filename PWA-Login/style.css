@@ -1,0 +1,101 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Containers (Login e Conteúdo Principal) */
+.login-container, .main-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Estilo para a tela de LOGIN */
+.login-container {
+    border-top: 5px solid #3f51b5;
+}
+
+h1 {
+    color: #3f51b5;
+    margin-bottom: 24px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3f51b5;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+button:active {
+    transform: translateY(1px);
+}
+
+.error {
+    color: #d32f2f;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* CLASSES PARA MENSAGEM DE SUCESSO E TROCA DE TELA */
+.hidden {
+    display: none !important;
+}
+
+.main-content {
+    background-color: #e8f5e9; /* Fundo verde claro para sucesso */
+    border: 2px solid #4caf50; /* Borda verde */
+}
+
+#welcomeMessage {
+    color: #388e3c; /* Cor verde escura para o texto de sucesso */
+    margin-bottom: 20px;
+    font-size: 1.6em; 
+    font-weight: 700;
+}
+
+#logoutButton {
+    background-color: #f44336;
+    margin-top: 30px;
+}
+#logoutButton:hover {
+    background-color: #d32f2f;
+}

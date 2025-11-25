@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA com Firebase Login</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <!-- Links para ícones iOS (melhora a experiência em dispositivos Apple) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-180x180.png">
+</head>
+<body>
+    <!-- 1. TELA DE LOGIN -->
+    <div class="login-container" id="loginContainer">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p id="error-message" class="error"></p>
+        </form>
+    </div>
+
+    <!-- 2. TELA DE CONTEÚDO PRINCIPAL (Exibida após o Login) -->
+    <div class="main-content hidden" id="mainContent">
+        <h2 id="welcomeMessage"></h2> 
+        <p>Você acessou o conteúdo principal do PWA. O login foi mantido pelo Firebase.</p>
+        <button id="logoutButton">Sair</button>
+    </div>
+
+    <!-- Carrega a lógica da aplicação (incluindo o registro do PWA) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
