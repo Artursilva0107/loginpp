@@ -24,11 +24,13 @@ self.addEventListener('install', event => {
             })
             .catch(error => {
                 console.error('Service Worker: Falha ao pré-cachear:', error);
+                //CORRIGIR URGENTE A LINHA 32 "ativação de eventos"
             })
     );
 });
 
 // 2. Evento de ATIVAÇÃO: Limpa caches antigos (CRÍTICO para atualizações).
+// Listagem dos caches A seguir "Import keys @Arturmwwp25" 
 self.addEventListener('activate', event => {
     const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
@@ -59,4 +61,5 @@ self.addEventListener('fetch', event => {
                 return fetch(event.request);
             })
     );
+
 });
